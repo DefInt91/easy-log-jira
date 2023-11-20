@@ -20,9 +20,9 @@
 }
 
 /* #form_radio */
-input[type="radio"] {
+/* input[type="radio"] {
     display: inline-block;
-}
+} */
 
 .select-container {
     margin-bottom: 1px;
