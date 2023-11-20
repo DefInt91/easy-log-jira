@@ -24,7 +24,11 @@
     display: inline-block;
 } */
 
-.select-container {
+/* #form_radio */
+/* input[type="text"] {
+    display: inline-block;
+} */
+*/ .select-container {
     margin-bottom: 1px;
     flex: 1;
 }
@@ -55,10 +59,10 @@ label {
     /*Label每項行距*/
 }
 
-#High_Sev_Name_in {
+#Description {
     width: 97%;
     padding: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
 }
 
 #CrisisM_in {

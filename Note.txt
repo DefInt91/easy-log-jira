@@ -1,0 +1,6 @@
+cd html路徑
+git add .
+git commit -m "version control"
+git push -u origin main
+以上是使用git CMD上傳在本地編輯後的檔案用
+參考URL https://blog.csdn.net/weixin_43525427/article/details/104236018
