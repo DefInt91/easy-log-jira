@@ -63,8 +63,9 @@ function copyToClipboard() {
     var RootCauseElement = document.getElementById("RootCause").value;
     var SummaryElement = document.getElementById("Summary").value;
 
+
     // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
-    if (SummaryElement === "[MG+][Playcheck] Payout Inquiry" && severityElement === "SFG") {
+    if (SummaryElement === "[MG+][Playcheck] Payout Inquiry" && radioSFG === "SFG") {
         var formattedText = `
                 <b>Status: </b> ${statusElement}<br>
                 <b>Severity: </b> ${severityElement}<br>
