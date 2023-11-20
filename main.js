@@ -65,21 +65,19 @@ function copyToClipboard() {
 
 
     // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
-    if (SummaryElement.value === "[MG+][Playcheck] Payout Inquiry" && radioSFG.value === "SFG") {
-        var formattedText = `
+
+    var formattedText = `
                 <b>Status: </b> ${statusElement}<br>
                 <b>Severity: </b> ${severityElement}<br>
                 <b>Name: </b> ${High_Sev_NameElement}<br>
                 <b>Root Cause: </b> ${RootCauseElement}<br>
                 <b>Tier: </b> ${TierElement}<br>
                 <b>Summary: </b> ${SummaryElement}<br>`;
-        var copyTextDiv = document.getElementById("copyText");
-        copyTextDiv.innerHTML = formattedText;
-        copyTextDiv.focus();
-        document.execCommand("selectAll");
-        document.execCommand("copy");
-        alert("已複製到剪貼板");
-    } else {
-        alert("條件不滿足，無法執行複製到剪貼板的操作");
-    }
+    var copyTextDiv = document.getElementById("copyText");
+    copyTextDiv.innerHTML = formattedText;
+    copyTextDiv.focus();
+    document.execCommand("selectAll");
+    document.execCommand("copy");
+    alert("已複製到剪貼板");
+
 }
