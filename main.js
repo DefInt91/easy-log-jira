@@ -38,6 +38,22 @@ fetch('info_config.json')
     })
     .catch(error => console.error('載入 info_config.json 失敗：', error));
 
+// 在 DOM 加載完成後執行
+document.addEventListener('DOMContentLoaded', function () {
+    // 取得元素
+    var summarySelect = document.getElementById('Summary');
+    var radioSFG = document.getElementById('SFG_Radio');
+
+    // 監聽事件，當選擇改變時觸發
+    summarySelect.addEventListener('change', function () {
+        // 判斷條件
+        if (summarySelect.value === summarySelect.options[0].value && radioSFG.checked) {
+            // 調用複製到剪貼板的函數
+            copyToClipboard();
+        }
+    });
+});
+
 function copyToClipboard() {
     var statusElement = document.getElementById("status").value;
     var severityElement = document.getElementById("Severity").value;
@@ -48,7 +64,7 @@ function copyToClipboard() {
     var SummaryElement = document.getElementById("Summary").value;
 
     // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
-    if (statusElement === "特定的值" && severityElement === "SFG") {
+    if (SummaryElement === "[MG+][Playcheck] Payout Inquiry" && severityElement === "SFG") {
         var formattedText = `
                 <b>Status: </b> ${statusElement}<br>
                 <b>Severity: </b> ${severityElement}<br>
