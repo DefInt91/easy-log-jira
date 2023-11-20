@@ -65,7 +65,7 @@ function copyToClipboard() {
 
 
     // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
-    if (SummaryElement === "[MG+][Playcheck] Payout Inquiry" && radioSFG === "SFG") {
+    if (SummaryElement.value === "[MG+][Playcheck] Payout Inquiry" && radioSFG.value === "SFG") {
         var formattedText = `
                 <b>Status: </b> ${statusElement}<br>
                 <b>Severity: </b> ${severityElement}<br>
