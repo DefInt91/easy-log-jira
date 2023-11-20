@@ -37,3 +37,47 @@ fetch('info_config.json')
         });
     })
     .catch(error => console.error('載入 info_config.json 失敗：', error));
+
+// 在 DOM 加載完成後執行
+document.addEventListener('DOMContentLoaded', function () {
+    // 取得元素
+    var summarySelect = document.getElementById('Summary');
+    var radioSFG = document.getElementById('SFG_Radio');
+
+    // 監聽事件，當選擇改變時觸發
+    summarySelect.addEventListener('change', function () {
+        // 判斷條件
+        if (summarySelect.value === summarySelect.options[0].value && radioSFG.checked) {
+            // 調用複製到剪貼板的函數
+            copyToClipboard();
+        }
+    });
+});
+
+function copyToClipboard() {
+    var statusElement = document.getElementById("status").value;
+    var severityElement = document.getElementById("Severity").value;
+    var High_Sev_NameElement = document.getElementById("High_Sev_Name").value;
+    var Affecting_SElement = document.getElementById("RootCause").value;
+    var TierElement = document.getElementById("Tier").value;
+    var RootCauseElement = document.getElementById("RootCause").value;
+    var SummaryElement = document.getElementById("Summary").value;
+
+
+    // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
+
+    var formattedText = `
+                <b>Status: </b> ${statusElement}<br>
+                <b>Severity: </b> ${severityElement}<br>
+                <b>Name: </b> ${High_Sev_NameElement}<br>
+                <b>Root Cause: </b> ${RootCauseElement}<br>
+                <b>Tier: </b> ${TierElement}<br>
+                <b>Summary: </b> ${SummaryElement}<br>`;
+    var copyTextDiv = document.getElementById("copyText");
+    copyTextDiv.innerHTML = formattedText;
+    copyTextDiv.focus();
+    document.execCommand("selectAll");
+    document.execCommand("copy");
+    alert("已複製到剪貼板");
+
+}

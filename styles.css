@@ -19,7 +19,10 @@
     margin-right: 600;
 }
 
-
+/* #form_radio */
+/* input[type="radio"] {
+    display: inline-block;
+} */
 
 .select-container {
     margin-bottom: 1px;
@@ -46,7 +49,8 @@ form {
 
 
 label {
-    display: block;
+    display: inline-block;
+    /*鎖定顯示在同一行*/
     margin-bottom: 2px;
     /*Label每項行距*/
 }
