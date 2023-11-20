@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動態生成選項</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<form>
+
+    <body>
+        <div class="select-container" id="Summary_container">
+            <label for="Summary">Summary：</label>
+            <select id="Summary"></select>
+        </div>
+
+        <!-- 使用迴圈動態生成多個選項組 -->
+        <div class="select-container" id="comms_manager_container">
+            <label for="comms_manager">Comms Manager：</label>
+            <select id="comms_manager"></select>
+        </div>
+
+        <div class="select-container" id="severity_container">
+            <label for="severity">Severity：</label>
+            <select id="severity"></select>
+        </div>
+
+        <div class="select-container" id="tier_container">
+            <label for="tier">Tier：</label>
+            <select id="tier"></select>
+        </div>
+
+        <!-- 添加其他選項組 -->
+        <div class="select-container" id="RC_container">
+            <label for="root_cause">Root Cause：</label>
+            <select id="root_cause"></select>
+        </div>
+
+
+        <div class="form-check">
+            <label for="K2_Radio">K2</label>
+            <input type="radio" name="Provider">
+        </div>
+        <div class="form-check">
+            <label for="OA_Radio">OA</label>
+            <input type="radio" name="Provider">
+        </div>
+
+
+        <!-- 引用 JavaScript 檔案 -->
+        <script src="main.js"></script>
+        <script src="copy.js"></script>
+
+    </body>
+    <button type="button" onclick="copyToClipboard()">Print</button>
+    <div id="copyText" contenteditable="true"></div>
+</form>
+
+</html>

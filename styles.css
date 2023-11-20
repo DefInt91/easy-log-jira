@@ -1,0 +1,92 @@
+/* 筆記 */
+/* class用法在Css中名稱前面用#加名稱 Html 物件內要有class=名稱元素 */
+/* id用法在CSS中名稱前用.加名稱 Html 物內要有id=名稱元素 */
+/* 沒有指定form/leble/button會套用到全部 */
+
+/* 新增樣式用於控制下拉選單和按鈕的位置 */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    margin-right: 10px;
+}
+
+.form-row-fram {
+    display: flex;
+    margin-right: 600;
+}
+
+
+
+.select-container {
+    margin-bottom: 1px;
+    flex: 1;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+
+}
+
+form {
+    margin-right: 20px;
+    /* 可以根據需要設定右邊距 */
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 2px;
+    /*Label每項行距*/
+}
+
+#High_Sev_Name_in {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+#CrisisM_in {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* 選擇器 [name="status"] 表示選擇 name 屬性為 status 的元素 */
+select[name="CommsM"] {
+    height: 35px;
+    /* 修改這個值以改變下拉選單的高度 */
+}
+
+#CommsM {
+    position: relative;
+    /* 相對定位 */
+    left: 0px;
+    /* 左偏移 10 像素 */
+    top: -8px;
+    /* 上偏移 5 像素 */
+}
