@@ -43,12 +43,12 @@ function loadOptions() {
         .catch(error => console.error('載入 info_config.json 失敗：', error));
 }
 
-if (typeof document !== 'undefined') {
-    document.addEventListener('DOMContentLoaded', function () {
-        // 現在這裡呼叫 loadOptions 函數
-        loadOptions();
-    });
-}
+// if (typeof document !== 'undefined') {
+//     document.addEventListener('DOMContentLoaded', function () {
+//         // 現在這裡呼叫 loadOptions 函數
+//         loadOptions();
+//     });
+// }
 
 
 function copyToClipboard() {
