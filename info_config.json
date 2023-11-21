@@ -175,9 +175,5 @@
         "",
         "GPM is recovering. The GPM started to recover at 04:35(GMT+8) and returned to normal at 05:30(GMT+8).",
         "Further details will be provided in a Post Sev report after additional investigations."
-    ],
-    "user": "joy.huang@luanta.com.tw",
-    "apikey": "ATATT3xFfGF0hjTuNO_pRymKS31y1baEHAFgxFS2J55l351FoBsrs5B61yPj9o8zvcxHEUa940bTA5Ho98Uar6lItPoHu-s6A_w1DddTfbfj-SkRYCiCgaCgQ0a_YkqT_r9xE0XTA5h4sgfUNKLjAvR-Pa_KmqXnIXHd1dWZnE4TRz3KnPuI-vw=CEB2B041",
-    "server": "https://asiasupport247.atlassian.net",
-    "escalated_by": "Joy Huang (+886 226 560 700 ext 207)"
+    ]
 }

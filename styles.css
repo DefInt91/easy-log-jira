@@ -3,21 +3,9 @@
 /* id用法在CSS中名稱前用.加名稱 Html 物內要有id=名稱元素 */
 /* 沒有指定form/leble/button會套用到全部 */
 
-/* 新增樣式用於控制下拉選單和按鈕的位置 */
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
 
-.form-row label {
-    margin-right: 10px;
-}
 
-.form-row-fram {
-    display: flex;
-    margin-right: 600;
-}
+
 
 /* #form_radio */
 /* input[type="radio"] {
@@ -29,18 +17,28 @@
     display: inline-block;
 } */
 */ .select-container {
-    margin-bottom: 1px;
+    margin-bottom: 100px;
+    margin-right: 100px;
     flex: 1;
 }
 
+/* body整體的字型或顏色 */
 body {
     font-family: Calibri, sans-serif;
-
 }
 
 form {
     margin-right: 20px;
     /* 可以根據需要設定右邊距 */
+}
+
+.Form2 {
+    /* margin-left: 100px; */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .container {
@@ -51,26 +49,29 @@ form {
     border-radius: 10px;
 }
 
-
+/* 指定所有的label */
 label {
     display: inline-block;
     /*鎖定顯示在同一行*/
-    margin-bottom: 2px;
+    margin-bottom: 20x;
     /*Label每項行距*/
 }
 
+/* 指定class為下面變數名的 */
 #Description {
     width: 97%;
     padding: 8px;
     margin-bottom: 2px;
 }
 
+/* 指定class為下面變數名的 */
 #CrisisM_in {
     width: 94%;
     padding: 8px;
     margin-bottom: 15px;
 }
 
+/* 指定所有button */
 button {
     background-color: #4CAF50;
     color: white;
@@ -80,6 +81,7 @@ button {
     cursor: pointer;
 }
 
+/* 滑鼠移到button上時變色 */
 button:hover {
     background-color: #000000;
 }

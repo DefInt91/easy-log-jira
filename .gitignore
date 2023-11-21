@@ -35,3 +35,5 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+# 忽略敏感信息
+*.json

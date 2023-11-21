@@ -1,0 +1,26 @@
+jobs:
+  your-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Secrets in the environment
+        run: |
+          echo "export JIRA_TOKEN=${{ secrets.JIRATOKEN }}" >> $GITHUB_ENV
+          echo "USER=${{ secrets.USER }}" >> $GITHUB_ENV
+          echo "SERVER=${{ secrets.SERVER }}" >> $GITHUB_ENV
+          echo "ESCALATED_BY=${{ secrets.ESCALATED_BY }}" >> $GITHUB_ENV
+        env:
+          JIRA_TOKEN: ${{ secrets.JIRATOKEN }}
+          USER: ${{ secrets.USER }}
+          SERVER: ${{ secrets.SERVER }}
+          ESCALATED_BY: ${{ secrets.ESCALATED_BY }}
+
+      - name: Run main JavaScript script
+        run: node main.js
+        env:
+          JIRA_TOKEN: ${{ secrets.JIRATOKEN }}
+          USER: ${{ secrets.USER }}
+          SERVER: ${{ secrets.SERVER }}
+          ESCALATED_BY: ${{ secrets.ESCALATED_BY }}
