@@ -7,7 +7,7 @@ jobs:
 
       - name: Use Secrets in the environment
         run: |
-          echo "export JIRA_TOKEN=${{ secrets.JIRATOKEN }}" >> $GITHUB_ENV
+          echo "JIRA_TOKEN=${{ secrets.JIRATOKEN }}" >> $GITHUB_ENV
           echo "USER=${{ secrets.USER }}" >> $GITHUB_ENV
           echo "SERVER=${{ secrets.SERVER }}" >> $GITHUB_ENV
           echo "ESCALATED_BY=${{ secrets.ESCALATED_BY }}" >> $GITHUB_ENV
