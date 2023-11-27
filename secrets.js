@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('credential.yml')
+    fetch('https://github.com/DefInt91/easy-log-jira/blob/main/.github/workflows/credential.yml')
         .then(response => response.text())
         .then(yamlText => {
             const secrets = jsyaml.load(yamlText);
