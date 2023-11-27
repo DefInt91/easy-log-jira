@@ -1,16 +1,3 @@
-// 讀取在 github 設定的 token
-// 在 Node.js 中讀取環境變量
-const jiraToken = process.env.JIRA_TOKEN;
-const user = process.env.USER;
-const server = process.env.SERVER;
-const escalatedBy = process.env.ESCALATED_BY;
-
-// 現在，你可以在代碼中使用 jiraToken 了
-console.log('Jira Token:', jiraToken);
-console.log('User:', user);
-console.log('Server:', server);
-console.log('Escalated By:', escalatedBy);
-
 // 載入 info_config.json
 function loadOptions() {
     fetch('info_config.json')
