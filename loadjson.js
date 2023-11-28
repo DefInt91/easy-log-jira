@@ -35,4 +35,3 @@ function loadOptions() {
         })
         .catch(error => console.error('載入 info_config.json 失敗：', error));
 }
-loadOptions()
