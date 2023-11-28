@@ -1,3 +1,9 @@
+// 定義 selectGroups
+var selectGroups = [
+    { containerId: 'Summary_container', selectId: 'Summary', dataKey: 'Summary', label: 'Summary' },
+    // 根據需要添加其他選擇組
+];
+
 // 載入 info_config.json
 function loadOptions() {
     fetch('info_config.json')
@@ -29,3 +35,4 @@ function loadOptions() {
         })
         .catch(error => console.error('載入 info_config.json 失敗：', error));
 }
+loadOptions()
