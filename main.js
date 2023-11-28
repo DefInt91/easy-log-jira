@@ -20,18 +20,18 @@ console.log('Escalated By:', escalatedBy);
 
 
 function copyToClipboard() {
-    var statusElement = document.getElementById("status").value;
-    var severityElement = document.getElementById("Severity").value;
-    var High_Sev_NameElement = document.getElementById("High_Sev_Name").value;
-    var Affecting_SElement = document.getElementById("RootCause").value;
-    var TierElement = document.getElementById("Tier").value;
-    var RootCauseElement = document.getElementById("RootCause").value;
+    // var statusElement = document.getElementById("status").value;
+    // var severityElement = document.getElementById("Severity").value;
+    // var High_Sev_NameElement = document.getElementById("High_Sev_Name").value;
+    // var Affecting_SElement = document.getElementById("RootCause").value;
+    // var TierElement = document.getElementById("Tier").value;
+    // var RootCauseElement = document.getElementById("RootCause").value;
     var SummaryElement = document.getElementById("Summary").value;
 
     // 添加條件判斷，如果滿足條件則執行複製到剪貼板的操作
     var formattedText = `
-    <b>Server: ${server}</b>
-        <b>Summary: </b> ${SummaryElement}<br>`;
+        <b>Server: ${server}</b>
+        <b>Summary: </b> ${SERVER}<br>`;
 
     var copyTextDiv = document.getElementById("copyText");
     copyTextDiv.innerHTML = formattedText;
